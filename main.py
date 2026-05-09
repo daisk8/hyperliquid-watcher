@@ -1,0 +1,251 @@
+"""
+Hyperliquid BTC Perp Watcher (Discord Webhook版)
+トップトレーダーのBTCポジション変化をDiscordに通知する
+
+環境変数:
+    DISCORD_WEBHOOK_URL : Discordチャンネルで発行したWebhook URL
+    （取得手順: チャンネル設定 → 連携サービス → ウェブフック → 新しいウェブフック）
+"""
+
+import os
+import json
+import time
+import requests
+from datetime import datetime
+
+# ──────────────────────────────────────────
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
+CHECK_INTERVAL = 300        # 5分ごとにチェック
+TOP_N = 20                  # Leaderboard上位何人を監視するか
+MIN_BTC_SIZE = 0.1          # 無視するポジションサイズの下限（BTC）
+
+HYPERLIQUID_API = "https://api.hyperliquid.xyz/info"
+
+# Discordのメッセージ最大長は2000文字
+DISCORD_MAX_LEN = 1900
+
+
+# ─────────────────────────────────────────
+# Discord通知
+# ─────────────────────────────────────────
+def send_discord(message: str) -> None:
+    """Discord Webhookにメッセージを送信する。
+
+    Webhook URLが未設定の場合は標準出力にフォールバックする。
+    Discordの2000文字制限を超える場合は分割送信する。
+    """
+    if not DISCORD_WEBHOOK_URL:
+        print(f"[DISCORD] {message}")
+        return
+
+    # 長すぎる場合は分割して送る
+    chunks = [message[i:i + DISCORD_MAX_LEN] for i in range(0, len(message), DISCORD_MAX_LEN)] or [message]
+    for chunk in chunks:
+        try:
+            res = requests.post(
+                DISCORD_WEBHOOK_URL,
+                json={"content": chunk},
+                timeout=10,
+            )
+            # Discordはレート制限時に429を返す
+            if res.status_code == 429:
+                retry_after = float(res.json().get("retry_after", 1))
+                time.sleep(retry_after + 0.5)
+                requests.post(
+                    DISCORD_WEBHOOK_URL,
+                    json={"content": chunk},
+                    timeout=10,
+                )
+            elif res.status_code >= 400:
+                print(f"Discord送信エラー: status={res.status_code} body={res.text[:200]}")
+        except Exception as e:
+            print(f"Discord送信エラー: {e}")
+
+
+# ─────────────────────────────────────────
+# Hyperliquid API
+# ─────────────────────────────────────────
+def fetch_leaderboard() -> list[dict]:
+    try:
+        res = requests.post(
+            HYPERLIQUID_API,
+            json={"type": "leaderboard"},
+            timeout=15,
+        )
+        data = res.json()
+        entries = data.get("leaderboardRows", [])
+        return entries[:TOP_N]
+    except Exception as e:
+        print(f"Leaderboard取得エラー: {e}")
+        return []
+
+
+def fetch_positions(address: str) -> list[dict]:
+    try:
+        res = requests.post(
+            HYPERLIQUID_API,
+            json={"type": "clearinghouseState", "user": address},
+            timeout=15,
+        )
+        data = res.json()
+        positions = data.get("assetPositions", [])
+        btc_positions = []
+        for p in positions:
+            pos = p.get("position", {})
+            coin = pos.get("coin", "")
+            size = float(pos.get("szi", 0))
+            if coin == "BTC" and abs(size) >= MIN_BTC_SIZE:
+                btc_positions.append({
+                    "coin": coin,
+                    "size": size,
+                    "entry_price": float(pos.get("entryPx", 0)),
+                    "unrealized_pnl": float(pos.get("unrealizedPnl", 0)),
+                    "leverage": pos.get("leverage", {}).get("value", "?"),
+                })
+        return btc_positions
+    except Exception as e:
+        print(f"ポジション取得エラー ({address[:8]}...): {e}")
+        return []
+
+
+# ─────────────────────────────────────────
+# 変化検出ロジック
+# ─────────────────────────────────────────
+def detect_changes(
+    prev: dict[str, list],
+    curr: dict[str, list],
+    trader_names: dict[str, str],
+) -> list[str]:
+    messages = []
+    all_addresses = set(prev.keys()) | set(curr.keys())
+
+    for addr in all_addresses:
+        name = trader_names.get(addr, addr[:8] + "...")
+        prev_pos = {p["coin"]: p for p in prev.get(addr, [])}
+        curr_pos = {p["coin"]: p for p in curr.get(addr, [])}
+
+        for coin in set(prev_pos.keys()) | set(curr_pos.keys()):
+            p = prev_pos.get(coin)
+            c = curr_pos.get(coin)
+
+            if p is None and c is not None:
+                direction = "🟢 LONG" if c["size"] > 0 else "🔴 SHORT"
+                msg = (
+                    f"\n🚨 新規エントリー検出\n"
+                    f"トレーダー: {name}\n"
+                    f"銘柄: {coin}\n"
+                    f"方向: {direction}\n"
+                    f"サイズ: {abs(c['size']):.4f} BTC\n"
+                    f"エントリー価格: ${c['entry_price']:,.0f}\n"
+                    f"レバレッジ: {c['leverage']}x\n"
+                    f"時刻: {datetime.now().strftime('%H:%M')}"
+                )
+                messages.append(msg)
+
+            elif p is not None and c is None:
+                direction = "LONG" if p["size"] > 0 else "SHORT"
+                pnl = p["unrealized_pnl"]
+                pnl_emoji = "✅" if pnl >= 0 else "❌"
+                msg = (
+                    f"\n💨 ポジションクローズ\n"
+                    f"トレーダー: {name}\n"
+                    f"銘柄: {coin} ({direction})\n"
+                    f"サイズ: {abs(p['size']):.4f} BTC\n"
+                    f"含み損益: {pnl_emoji} ${pnl:+,.0f}\n"
+                    f"時刻: {datetime.now().strftime('%H:%M')}"
+                )
+                messages.append(msg)
+
+            elif p is not None and c is not None:
+                size_diff = c["size"] - p["size"]
+                if abs(p["size"]) > 0 and abs(size_diff / p["size"]) > 0.1:
+                    action = "📈 増玉" if abs(c["size"]) > abs(p["size"]) else "📉 減玉"
+                    msg = (
+                        f"\n{action} 検出\n"
+                        f"トレーダー: {name}\n"
+                        f"銘柄: {coin}\n"
+                        f"変化: {p['size']:+.4f} → {c['size']:+.4f} BTC\n"
+                        f"現在エントリー価格: ${c['entry_price']:,.0f}\n"
+                        f"時刻: {datetime.now().strftime('%H:%M')}"
+                    )
+                    messages.append(msg)
+
+    return messages
+
+
+# ─────────────────────────────────────────
+# メインループ
+# ─────────────────────────────────────────
+def main():
+    print("🚀 Hyperliquid BTC Watcher 起動")
+    send_discord("\n🚀 Hyperliquid BTC Watcher 起動しました\nトップ20トレーダーのBTCポジションを監視中...")
+
+    prev_positions: dict[str, list] = {}
+    trader_names: dict[str, str] = {}
+
+    while True:
+        try:
+            leaders = fetch_leaderboard()
+            if not leaders:
+                print("Leaderboard取得失敗、リトライします")
+                time.sleep(60)
+                continue
+
+            for i, entry in enumerate(leaders):
+                addr = entry.get("ethAddress", "")
+                if addr:
+                    trader_names[addr] = f"#{i+1}位"
+
+            curr_positions: dict[str, list] = {}
+            for entry in leaders:
+                addr = entry.get("ethAddress", "")
+                if addr:
+                    positions = fetch_positions(addr)
+                    curr_positions[addr] = positions
+                    time.sleep(0.2)
+
+            if prev_positions:
+                changes = detect_changes(prev_positions, curr_positions, trader_names)
+                for msg in changes:
+                    print(msg)
+                    send_discord(msg)
+                if not changes:
+                    print(f"[{datetime.now().strftime('%H:%M:%S')}] 変化なし")
+            else:
+                total_long = sum(
+                    p["size"] for positions in curr_positions.values()
+                    for p in positions if p["size"] > 0
+                )
+                total_short = sum(
+                    abs(p["size"]) for positions in curr_positions.values()
+                    for p in positions if p["size"] < 0
+                )
+                btc_holders = sum(
+                    1 for positions in curr_positions.values() if positions
+                )
+                if (total_long + total_short) > 0:
+                    summary = (
+                        f"\n📊 初回スキャン完了\n"
+                        f"監視トレーダー数: {len(leaders)}人\n"
+                        f"BTC保有者: {btc_holders}人\n"
+                        f"合計ロング: {total_long:.2f} BTC\n"
+                        f"合計ショート: {total_short:.2f} BTC\n"
+                        f"ロング優勢率: {total_long/(total_long+total_short)*100:.0f}%"
+                    )
+                else:
+                    summary = "\n📊 初回スキャン完了\n合計ポジションなし"
+                print(summary)
+                send_discord(summary)
+
+            prev_positions = curr_positions
+
+        except Exception as e:
+            print(f"メインループエラー: {e}")
+            time.sleep(60)
+            continue
+
+        time.sleep(CHECK_INTERVAL)
+
+
+if __name__ == "__main__":
+    main()

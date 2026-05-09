@@ -18,15 +18,16 @@ from datetime import datetime, timezone
 
 import requests
 
-# ────────────────────────────────────────
+# ─────────────────────────────────────────
 # 設定
-# ────────────────────────────────────────
+# ─────────────────────────────────────────
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
 TOP_N = 20                  # Leaderboard上位何人を監視するか
 MIN_BTC_SIZE = 0.1          # 無視するポジションサイズの下限（BTC）
 STATE_FILE = "state.json"
 
 HYPERLIQUID_API = "https://api.hyperliquid.xyz/info"
+HYPERLIQUID_LEADERBOARD_URL = "https://stats-data.hyperliquid.xyz/Mainnet/leaderboard"
 
 # Discordのメッセージ最大長は2000文字
 DISCORD_MAX_LEN = 1900
@@ -67,14 +68,20 @@ def send_discord(message: str) -> None:
 # Hyperliquid API
 # ─────────────────────────────────────────
 def fetch_leaderboard() -> list:
+    """Hyperliquidのフロントエンド統計エンドポイントからリーダーボードを取得する。
+
+    公式の /info エンドポイントには leaderboard タイプが存在しないため、
+    フロントエンドが利用している stats-data エンドポイントを使う。
+    """
     try:
-        res = requests.post(
-            HYPERLIQUID_API,
-            json={"type": "leaderboard"},
-            timeout=15,
-        )
+        res = requests.get(HYPERLIQUID_LEADERBOARD_URL, timeout=20)
+        if res.status_code != 200:
+            print(f"Leaderboard HTTP {res.status_code}: {res.text[:300]}")
+            return []
         data = res.json()
         entries = data.get("leaderboardRows", [])
+        if not entries:
+            print(f"leaderboardRowsが空。レスポンスキー: {list(data.keys())[:10] if isinstance(data, dict) else type(data).__name__}")
         return entries[:TOP_N]
     except Exception as e:
         print(f"Leaderboard取得エラー: {e}")
@@ -133,7 +140,7 @@ def save_state(state: dict) -> None:
 
 # ─────────────────────────────────────────
 # 変化検出ロジック
-# ─────────────────────────────────────────
+# ────────────────────────────────────────
 def detect_changes(prev: dict, curr: dict, trader_names: dict) -> list:
     messages = []
     all_addresses = set(prev.keys()) | set(curr.keys())

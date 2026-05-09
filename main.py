@@ -1,10 +1,18 @@
 """
-Hyperliquid BTC Perp Watcher (GitHub Actions cron 版)
+Hyperliquid BTC Perp Watcher v2 (アグリゲート/合意シグナル/急変アラート版)
 
-トップトレーダーのBTCポジション変化をDiscordに通知する。
-GitHub Actionsから5〜10分間隔で1回実行される設計。
-前回スナップショットは state.json に保存し、ワークフローが
-コミットバックすることで次回実行時に引き継ぐ。
+トップトレーダーのBTCポジション動向をDiscordに通知する。
+GitHub Actions cronから5分間隔で実行されるが、通知は次の3種類のみ：
+
+  1. 4時間アグリゲート (UTC 00/04/08/12/16/20 のバケットに最初に入った実行)
+     → ロング/ショート集計、ロング優勢率
+  2. 合意シグナル (1回の実行で同方向の新規エントリーが N 人以上)
+     → 短期センチメント急変の早期検知
+  3. 急変アラート (ロング優勢率が前回比 X% ポイント以上動いた)
+     → 集計値の急変検知
+
+state.json に前回スナップショット・前回ロング優勢率・最後にアグリゲートを送った
+4時間バケットを保存し、ワークフローがコミットバックする。
 
 環境変数:
     DISCORD_WEBHOOK_URL : Discordチャンネルで発行したWebhook URL
@@ -26,10 +34,16 @@ TOP_N = 20                  # Leaderboard上位何人を監視するか
 MIN_BTC_SIZE = 0.1          # 無視するポジションサイズの下限（BTC）
 STATE_FILE = "state.json"
 
+# 通知ロジック
+AGGREGATE_HOURS_UTC = (0, 4, 8, 12, 16, 20)   # 4時間アグリゲート対象（UTC）
+CONSENSUS_THRESHOLD = 3                        # この人数以上が同方向に新規→合意シグナル
+RATIO_CHANGE_THRESHOLD_PCT = 10.0              # ロング優勢率がこのpt以上動いたら急変アラート
+
+# Hyperliquid API
 HYPERLIQUID_API = "https://api.hyperliquid.xyz/info"
 HYPERLIQUID_LEADERBOARD_URL = "https://stats-data.hyperliquid.xyz/Mainnet/leaderboard"
 
-# Discordのメッセージ最大長は2000文字
+# Discord
 DISCORD_MAX_LEN = 1900
 
 
@@ -68,11 +82,7 @@ def send_discord(message: str) -> None:
 # Hyperliquid API
 # ─────────────────────────────────────────
 def fetch_leaderboard() -> list:
-    """Hyperliquidのフロントエンド統計エンドポイントからリーダーボードを取得する。
-
-    公式の /info エンドポイントには leaderboard タイプが存在しないため、
-    フロントエンドが利用している stats-data エンドポイントを使う。
-    """
+    """フロントエンド統計エンドポイントからリーダーボードを取得。"""
     try:
         res = requests.get(HYPERLIQUID_LEADERBOARD_URL, timeout=20)
         if res.status_code != 200:
@@ -89,6 +99,7 @@ def fetch_leaderboard() -> list:
 
 
 def fetch_positions(address: str) -> list:
+    """指定アドレスのBTC perpポジションを取得。"""
     try:
         res = requests.post(
             HYPERLIQUID_API,
@@ -120,96 +131,125 @@ def fetch_positions(address: str) -> list:
 # 状態の永続化
 # ─────────────────────────────────────────
 def load_state() -> dict:
-    """state.jsonを読み込む。存在しなければ空のスケルトンを返す。"""
     if not os.path.exists(STATE_FILE):
-        return {"positions": {}, "trader_names": {}, "last_run": None}
+        return {}
     try:
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
         print(f"state.json読み込み失敗 (空からやり直します): {e}")
-        return {"positions": {}, "trader_names": {}, "last_run": None}
+        return {}
 
 
 def save_state(state: dict) -> None:
-    """state.jsonに書き込む。"""
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 
 # ─────────────────────────────────────────
-# 変化検出ロジック
-# ────────────────────────────────────────
-def detect_changes(prev: dict, curr: dict, trader_names: dict) -> list:
-    messages = []
-    all_addresses = set(prev.keys()) | set(curr.keys())
-    now_str = datetime.now().strftime("%H:%M")
+# 集計・差分検出
+# ─────────────────────────────────────────
+def compute_aggregate(positions_dict: dict, leaders_count: int) -> dict:
+    """ポジション辞書から集計指標を計算する。"""
+    flat_positions = [
+        p for positions in positions_dict.values() for p in positions
+    ]
+    long_positions = [p for p in flat_positions if p["size"] > 0]
+    short_positions = [p for p in flat_positions if p["size"] < 0]
 
-    for addr in all_addresses:
-        name = trader_names.get(addr, addr[:8] + "...")
-        prev_pos = {p["coin"]: p for p in prev.get(addr, [])}
-        curr_pos = {p["coin"]: p for p in curr.get(addr, [])}
+    total_long = sum(p["size"] for p in long_positions)
+    total_short = sum(abs(p["size"]) for p in short_positions)
+    btc_holders = sum(1 for positions in positions_dict.values() if positions)
 
-        for coin in set(prev_pos.keys()) | set(curr_pos.keys()):
-            p = prev_pos.get(coin)
-            c = curr_pos.get(coin)
+    if total_long + total_short > 0:
+        long_ratio = total_long / (total_long + total_short) * 100
+    else:
+        long_ratio = None
 
-            if p is None and c is not None:
-                direction = "🟢 LONG" if c["size"] > 0 else "🔴 SHORT"
-                msg = (
-                    f"\n🚨 新規エントリー検出\n"
-                    f"トレーダー: {name}\n"
-                    f"銘柄: {coin}\n"
-                    f"方向: {direction}\n"
-                    f"サイズ: {abs(c['size']):.4f} BTC\n"
-                    f"エントリー価格: ${c['entry_price']:,.0f}\n"
-                    f"レバレッジ: {c['leverage']}x\n"
-                    f"時刻: {now_str}"
-                )
-                messages.append(msg)
+    return {
+        "leaders_count": leaders_count,
+        "btc_holders": btc_holders,
+        "total_long": total_long,
+        "total_short": total_short,
+        "long_count": len(long_positions),
+        "short_count": len(short_positions),
+        "long_ratio": long_ratio,
+    }
 
-            elif p is not None and c is None:
-                direction = "LONG" if p["size"] > 0 else "SHORT"
-                pnl = p["unrealized_pnl"]
-                pnl_emoji = "✅" if pnl >= 0 else "❌"
-                msg = (
-                    f"\n💨 ポジションクローズ\n"
-                    f"トレーダー: {name}\n"
-                    f"銘柄: {coin} ({direction})\n"
-                    f"サイズ: {abs(p['size']):.4f} BTC\n"
-                    f"含み損益: {pnl_emoji} ${pnl:+,.0f}\n"
-                    f"時刻: {now_str}"
-                )
-                messages.append(msg)
 
-            elif p is not None and c is not None:
-                size_diff = c["size"] - p["size"]
-                if abs(p["size"]) > 0 and abs(size_diff / p["size"]) > 0.1:
-                    action = "📈 増玉" if abs(c["size"]) > abs(p["size"]) else "📉 減玉"
-                    msg = (
-                        f"\n{action} 検出\n"
-                        f"トレーダー: {name}\n"
-                        f"銘柄: {coin}\n"
-                        f"変化: {p['size']:+.4f} → {c['size']:+.4f} BTC\n"
-                        f"現在エントリー価格: ${c['entry_price']:,.0f}\n"
-                        f"時刻: {now_str}"
-                    )
-                    messages.append(msg)
+def format_aggregate(agg: dict, label: str) -> str:
+    """アグリゲート指標を整形する。"""
+    if agg["long_ratio"] is None:
+        return f"\n{label}\nBTCポジションなし"
 
-    return messages
+    ratio = agg["long_ratio"]
+    bias_emoji = "🟢" if ratio > 60 else ("🔴" if ratio < 40 else "⚖️")
+
+    return (
+        f"\n{label}\n"
+        f"監視: {agg['leaders_count']}人 / BTC保有: {agg['btc_holders']}人\n"
+        f"ロング: {agg['long_count']}人 ({agg['total_long']:.2f} BTC)\n"
+        f"ショート: {agg['short_count']}人 ({agg['total_short']:.2f} BTC)\n"
+        f"ロング優勢率: {bias_emoji} {ratio:.0f}%"
+    )
+
+
+def get_4h_bucket(dt: datetime) -> str:
+    """UTC 4時間バケットキー。例: '2026-05-09T08'。"""
+    bucket_hour = (dt.hour // 4) * 4
+    return f"{dt.strftime('%Y-%m-%d')}T{bucket_hour:02d}"
+
+
+def detect_new_entries(prev: dict, curr: dict) -> tuple:
+    """前回→今回でBTCに新規エントリーした人数を (long, short) で返す。
+
+    既にBTCを持っていた人がポジション継続している場合はカウントしない。
+    既存BTCをクローズして反対方向に新規した場合もカウントする。
+    """
+    new_long = 0
+    new_short = 0
+    for addr, curr_list in curr.items():
+        prev_btc = next(
+            (p for p in prev.get(addr, []) if p["coin"] == "BTC"), None
+        )
+        curr_btc = next(
+            (p for p in curr_list if p["coin"] == "BTC"), None
+        )
+
+        if curr_btc is None:
+            continue
+
+        if prev_btc is None:
+            # 完全新規
+            if curr_btc["size"] > 0:
+                new_long += 1
+            else:
+                new_short += 1
+        else:
+            # 方向反転（ロング→ショート or ショート→ロング）も新規扱い
+            prev_dir = 1 if prev_btc["size"] > 0 else -1
+            curr_dir = 1 if curr_btc["size"] > 0 else -1
+            if prev_dir != curr_dir:
+                if curr_dir > 0:
+                    new_long += 1
+                else:
+                    new_short += 1
+    return new_long, new_short
 
 
 # ─────────────────────────────────────────
 # メイン（1回実行）
 # ─────────────────────────────────────────
 def main() -> int:
-    print(f"🚀 [{datetime.now(timezone.utc).isoformat()}] BTC Watcher 起動")
+    now_utc = datetime.now(timezone.utc)
+    print(f"🚀 [{now_utc.isoformat()}] BTC Watcher v2 起動")
 
     # 状態読み込み
     state = load_state()
     prev_positions = state.get("positions", {})
-    trader_names = state.get("trader_names", {})
+    prev_long_ratio = state.get("long_ratio")
+    last_aggregate_bucket = state.get("last_aggregate_bucket")
     is_first_run = not prev_positions
 
     # Leaderboard取得
@@ -225,7 +265,7 @@ def main() -> int:
         if addr:
             new_trader_names[addr] = f"#{i+1}位"
 
-    # 各トレーダーのBTCポジション取得
+    # ポジション取得
     curr_positions = {}
     for entry in leaders:
         addr = entry.get("ethAddress", "")
@@ -233,50 +273,75 @@ def main() -> int:
             curr_positions[addr] = fetch_positions(addr)
             time.sleep(0.2)
 
-    # 通知
+    # 集計
+    agg = compute_aggregate(curr_positions, len(leaders))
+    current_long_ratio = agg["long_ratio"]
+    current_bucket = get_4h_bucket(now_utc)
+
+    notifications = []
+    aggregate_sent = False
+
+    # ─── 1. アグリゲート通知 ───
     if is_first_run:
-        # 初回スキャン: サマリーを送信
-        send_discord("\n🚀 Hyperliquid BTC Watcher 起動しました\nトップ20トレーダーのBTCポジションを監視中...")
-
-        total_long = sum(
-            p["size"] for positions in curr_positions.values()
-            for p in positions if p["size"] > 0
+        notifications.append(
+            format_aggregate(agg, "🚀 BTC Watcher 起動 - 初回スキャン")
         )
-        total_short = sum(
-            abs(p["size"]) for positions in curr_positions.values()
-            for p in positions if p["size"] < 0
-        )
-        btc_holders = sum(1 for positions in curr_positions.values() if positions)
+        aggregate_sent = True
+    elif current_bucket != last_aggregate_bucket and now_utc.hour in AGGREGATE_HOURS_UTC:
+        # 4時間バケットの境界を跨いだ最初の実行
+        label = f"📊 4時間アグリゲート ({now_utc.strftime('%Y-%m-%d %H:%M UTC')})"
+        notifications.append(format_aggregate(agg, label))
+        aggregate_sent = True
 
-        if (total_long + total_short) > 0:
-            ratio = total_long / (total_long + total_short) * 100
-            summary = (
-                f"\n📊 初回スキャン完了\n"
-                f"監視トレーダー数: {len(leaders)}人\n"
-                f"BTC保有者: {btc_holders}人\n"
-                f"合計ロング: {total_long:.2f} BTC\n"
-                f"合計ショート: {total_short:.2f} BTC\n"
-                f"ロング優勢率: {ratio:.0f}%"
+    # ─── 2. 合意シグナル（初回はスキップ） ───
+    if not is_first_run:
+        new_long, new_short = detect_new_entries(prev_positions, curr_positions)
+        if new_long >= CONSENSUS_THRESHOLD:
+            notifications.append(
+                f"\n🟢 合意シグナル: ロング\n"
+                f"{new_long}人のトップトレーダーがBTCロングに新規エントリー\n"
+                f"（直近5分以内）"
             )
-        else:
-            summary = "\n📊 初回スキャン完了\n合計ポジションなし"
-        print(summary)
-        send_discord(summary)
-    else:
-        # 通常実行: 差分のみ送信
-        changes = detect_changes(prev_positions, curr_positions, new_trader_names)
-        for msg in changes:
-            print(msg)
-            send_discord(msg)
-        if not changes:
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] 変化なし")
+        if new_short >= CONSENSUS_THRESHOLD:
+            notifications.append(
+                f"\n🔴 合意シグナル: ショート\n"
+                f"{new_short}人のトップトレーダーがBTCショートに新規エントリー\n"
+                f"（直近5分以内）"
+            )
+
+    # ─── 3. ロング優勢率の急変アラート（初回はスキップ） ───
+    if (
+        not is_first_run
+        and prev_long_ratio is not None
+        and current_long_ratio is not None
+        and abs(current_long_ratio - prev_long_ratio) >= RATIO_CHANGE_THRESHOLD_PCT
+    ):
+        diff = current_long_ratio - prev_long_ratio
+        arrow = "📈" if diff > 0 else "📉"
+        notifications.append(
+            f"\n⚡ ロング優勢率の急変\n"
+            f"{prev_long_ratio:.0f}% → {current_long_ratio:.0f}% "
+            f"({arrow} {diff:+.0f}pt)\n"
+            f"BTC保有: {agg['btc_holders']}人"
+        )
+
+    # 通知送信
+    for msg in notifications:
+        print(msg)
+        send_discord(msg)
+
+    if not notifications:
+        print(f"[{now_utc.strftime('%H:%M:%S')}] 通知なし（変化なし・アグリゲートタイミング外）")
 
     # 状態保存
-    save_state({
+    new_state = {
         "positions": curr_positions,
         "trader_names": new_trader_names,
-    })
-    print("✅ state.jsonを更新しました")
+        "long_ratio": current_long_ratio,
+        "last_aggregate_bucket": current_bucket if aggregate_sent else last_aggregate_bucket,
+    }
+    save_state(new_state)
+    print(f"✅ state.json更新（aggregate_sent={aggregate_sent}, notifications={len(notifications)}）")
     return 0
 
 

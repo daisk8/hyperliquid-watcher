@@ -7,9 +7,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -14.41879,
-        "entry_price": 62152.0,
-        "unrealized_pnl": -1845.265867,
+        "size": -24.36392,
+        "entry_price": 62207.3,
+        "unrealized_pnl": 837.258789,
         "leverage": 3
       }
     ],
@@ -20,9 +20,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 117.09731,
-        "entry_price": 61968.3,
-        "unrealized_pnl": 36380.080116,
+        "size": 121.11326,
+        "entry_price": 62007.5,
+        "unrealized_pnl": 20035.072863,
         "leverage": 20
       }
     ],
@@ -31,16 +31,16 @@
         "coin": "BTC",
         "size": -134.56087,
         "entry_price": 62311.3,
-        "unrealized_pnl": 4357.324086,
+        "unrealized_pnl": 18620.776306,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 0.98456,
-        "entry_price": 62255.0,
-        "unrealized_pnl": 23.62944,
+        "size": 0.6988,
+        "entry_price": 62197.3,
+        "unrealized_pnl": -17.008341,
         "leverage": 20
       }
     ],
@@ -53,9 +53,9 @@
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": [
       {
         "coin": "BTC",
-        "size": 11.26567,
-        "entry_price": 62090.1,
-        "unrealized_pnl": 2184.027836,
+        "size": 10.87558,
+        "entry_price": 62137.5,
+        "unrealized_pnl": 385.957623,
         "leverage": 40
       }
     ],
@@ -64,7 +64,7 @@
         "coin": "BTC",
         "size": 86.85746,
         "entry_price": 60596.6,
-        "unrealized_pnl": 146038.51896,
+        "unrealized_pnl": 136918.48566,
         "leverage": 9
       }
     ]
@@ -91,7 +91,7 @@
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": "#19位",
     "0x8ca341db4a455dec932ed6a29b16e75fa06ac22d": "#20位"
   },
-  "long_ratio": 59.204294068650086,
+  "long_ratio": 58.00860406623101,
   "last_aggregate_bucket": "2026-06-07T12",
-  "last_run": "2026-06-07T17:16:31.577002+00:00"
+  "last_run": "2026-06-07T18:40:27.305832+00:00"
 }

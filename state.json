@@ -7,9 +7,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -54.12571,
-        "entry_price": 62369.7,
-        "unrealized_pnl": -4886.375674,
+        "size": -29.20471,
+        "entry_price": 62400.1,
+        "unrealized_pnl": -6684.949643,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 109.54633,
-        "entry_price": 62514.8,
-        "unrealized_pnl": -6013.12356,
+        "size": 107.24899,
+        "entry_price": 62512.0,
+        "unrealized_pnl": 12545.435217,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": 1282.23048,
         "entry_price": 62930.4,
-        "unrealized_pnl": -604563.579242,
+        "unrealized_pnl": -394277.780522,
         "leverage": 20
       }
     ],
@@ -40,16 +40,16 @@
         "coin": "BTC",
         "size": -124.44682,
         "entry_price": 63769.3,
-        "unrealized_pnl": 163074.449776,
+        "unrealized_pnl": 142665.171296,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -5.6036,
-        "entry_price": 62477.6,
-        "unrealized_pnl": 104.744761,
+        "size": -9.69028,
+        "entry_price": 62561.5,
+        "unrealized_pnl": -595.718173,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -80.18359,
         "entry_price": 62349.4,
-        "unrealized_pnl": -8543.07189,
+        "unrealized_pnl": -22414.83296,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#20位"
   },
-  "long_ratio": 84.03756482564877,
+  "long_ratio": 85.08728268520106,
   "last_aggregate_bucket": "2026-06-23T20",
-  "last_run": "2026-06-23T20:20:48.677394+00:00"
+  "last_run": "2026-06-23T21:52:53.361101+00:00"
 }

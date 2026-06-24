@@ -7,9 +7,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -36.60313,
-        "entry_price": 59600.3,
-        "unrealized_pnl": -1123.094928,
+        "size": -40.20129,
+        "entry_price": 60823.5,
+        "unrealized_pnl": -4400.789187,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 46.21831,
-        "entry_price": 60558.8,
-        "unrealized_pnl": -42884.752281,
+        "size": -103.96729,
+        "entry_price": 60651.3,
+        "unrealized_pnl": -30945.542445,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": 468.42575,
         "entry_price": 62728.8,
-        "unrealized_pnl": -1439423.406175,
+        "unrealized_pnl": -833748.911425,
         "leverage": 20
       }
     ],
@@ -40,16 +40,16 @@
         "coin": "BTC",
         "size": -156.50508,
         "entry_price": 62939.2,
-        "unrealized_pnl": 513844.69805,
+        "unrealized_pnl": 311483.62961,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -2.99871,
-        "entry_price": 59638.1,
-        "unrealized_pnl": -53.511089,
+        "size": -0.98514,
+        "entry_price": 60957.1,
+        "unrealized_pnl": 8.068259,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -80.18359,
         "entry_price": 62349.4,
-        "unrealized_pnl": 216452.08165,
+        "unrealized_pnl": 111972.86388,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#20位"
   },
-  "long_ratio": 65.06784246388422,
+  "long_ratio": 55.09153265462822,
   "last_aggregate_bucket": "2026-06-24T08",
-  "last_run": "2026-06-24T19:19:30.476114+00:00"
+  "last_run": "2026-06-24T21:00:10.250253+00:00"
 }

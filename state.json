@@ -7,9 +7,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -43.94628,
-        "entry_price": 59833.0,
-        "unrealized_pnl": 925.033728,
+        "size": -47.28903,
+        "entry_price": 59708.5,
+        "unrealized_pnl": 16862.269977,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 233.99844,
-        "entry_price": 59426.8,
-        "unrealized_pnl": 90118.716646,
+        "size": 257.36677,
+        "entry_price": 59473.5,
+        "unrealized_pnl": -31787.585364,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": 468.42575,
         "entry_price": 62728.8,
-        "unrealized_pnl": -1366348.989175,
+        "unrealized_pnl": -1582761.685675,
         "leverage": 20
       }
     ],
@@ -40,16 +40,16 @@
         "coin": "BTC",
         "size": -107.5583,
         "entry_price": 61548.9,
-        "unrealized_pnl": 186822.504421,
+        "unrealized_pnl": 236514.439021,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 1.45601,
-        "entry_price": 59770.2,
-        "unrealized_pnl": 60.86099,
+        "size": -2.72623,
+        "entry_price": 59379.0,
+        "unrealized_pnl": 79.06067,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -84.15578,
         "entry_price": 62210.6,
-        "unrealized_pnl": 202029.85906,
+        "unrealized_pnl": 240741.51786,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#20位"
   },
-  "long_ratio": 74.91748945889042,
+  "long_ratio": 75.01561980212003,
   "last_aggregate_bucket": "2026-06-25T20",
-  "last_run": "2026-06-25T23:11:30.210148+00:00"
+  "last_run": "2026-06-26T01:28:47.004549+00:00"
 }

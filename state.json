@@ -7,9 +7,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -47.79212,
-        "entry_price": 60346.8,
-        "unrealized_pnl": 2333.002863,
+        "size": -33.19895,
+        "entry_price": 60284.6,
+        "unrealized_pnl": 5731.541043,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 204.73964,
-        "entry_price": 59862.7,
-        "unrealized_pnl": 89117.036469,
+        "size": 227.32827,
+        "entry_price": 59892.0,
+        "unrealized_pnl": 49991.318382,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": 468.42575,
         "entry_price": 62728.8,
-        "unrealized_pnl": -1138694.074675,
+        "unrealized_pnl": -1225821.264175,
         "leverage": 20
       }
     ],
@@ -40,16 +40,16 @@
         "coin": "BTC",
         "size": 60.99795,
         "entry_price": 59820.9,
-        "unrealized_pnl": 29096.109808,
+        "unrealized_pnl": 17750.491108,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -0.81305,
-        "entry_price": 60209.9,
-        "unrealized_pnl": -71.578858,
+        "size": 8.17736,
+        "entry_price": 60055.5,
+        "unrealized_pnl": 461.73023,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -16.45819,
         "entry_price": 60751.6,
-        "unrealized_pnl": 7416.56506,
+        "unrealized_pnl": 10527.16297,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#20位"
   },
-  "long_ratio": 91.85921090974564,
+  "long_ratio": 93.90400628677273,
   "last_aggregate_bucket": "2026-06-27T16",
-  "last_run": "2026-06-27T21:05:05.763299+00:00"
+  "last_run": "2026-06-27T22:12:53.750734+00:00"
 }

@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -33.48543,
-        "entry_price": 64183.0,
-        "unrealized_pnl": 904.754318,
+        "size": -34.93145,
+        "entry_price": 64190.1,
+        "unrealized_pnl": -1811.721327,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -125.39939,
-        "entry_price": 64131.2,
-        "unrealized_pnl": -3103.146039,
+        "size": -137.36106,
+        "entry_price": 64138.3,
+        "unrealized_pnl": -14233.458142,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": -170.36932,
         "entry_price": 62146.3,
-        "unrealized_pnl": -342383.005635,
+        "unrealized_pnl": -357034.767155,
         "leverage": 20
       }
     ],
@@ -41,9 +41,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -4.917,
-        "entry_price": 64215.6,
-        "unrealized_pnl": 313.04154,
+        "size": -7.63543,
+        "entry_price": 64241.5,
+        "unrealized_pnl": -3.620641,
         "leverage": 20
       }
     ],
@@ -52,7 +52,7 @@
         "coin": "BTC",
         "size": 70.68951,
         "entry_price": 64044.6,
-        "unrealized_pnl": 7587.21574,
+        "unrealized_pnl": 13949.27164,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -46.98291,
         "entry_price": 62381.5,
-        "unrealized_pnl": -83182.114083,
+        "unrealized_pnl": -87410.575983,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": "#20位"
   },
-  "long_ratio": 15.644686846925515,
+  "long_ratio": 15.105574788520487,
   "last_aggregate_bucket": "2026-07-11T12",
-  "last_run": "2026-07-11T12:31:50.188468+00:00"
+  "last_run": "2026-07-11T14:02:06.593302+00:00"
 }

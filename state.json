@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -35.69752,
-        "entry_price": 64090.8,
-        "unrealized_pnl": -1183.444474,
+        "size": -32.62833,
+        "entry_price": 64114.9,
+        "unrealized_pnl": -1797.805327,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -69.98931,
-        "entry_price": 64047.7,
-        "unrealized_pnl": -5545.634846,
+        "size": -90.74873,
+        "entry_price": 64075.3,
+        "unrealized_pnl": -8584.95242,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": -170.36932,
         "entry_price": 62146.3,
-        "unrealized_pnl": -337442.295355,
+        "unrealized_pnl": -343405.221555,
         "leverage": 20
       }
     ],
@@ -41,9 +41,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -1.62122,
-        "entry_price": 64168.1,
-        "unrealized_pnl": 66.660664,
+        "size": 3.33873,
+        "entry_price": 64164.8,
+        "unrealized_pnl": -9.633777,
         "leverage": 20
       }
     ],
@@ -52,7 +52,7 @@
         "coin": "BTC",
         "size": 70.68951,
         "entry_price": 64044.6,
-        "unrealized_pnl": 5819.97799,
+        "unrealized_pnl": 8364.80035,
         "leverage": 20
       }
     ],
@@ -63,7 +63,7 @@
         "coin": "BTC",
         "size": -46.98291,
         "entry_price": 62381.5,
-        "unrealized_pnl": -82007.541333,
+        "unrealized_pnl": -83698.926093,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x7c930969fcf3e5a5c78bcf2e1cefda3f53e3c8fd": "#19位",
     "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": "#20位"
   },
-  "long_ratio": 17.88024473213961,
+  "long_ratio": 17.84855840953629,
   "last_aggregate_bucket": "2026-07-11T00",
-  "last_run": "2026-07-11T03:34:58.912005+00:00"
+  "last_run": "2026-07-11T05:58:38.337024+00:00"
 }

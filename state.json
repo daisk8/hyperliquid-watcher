@@ -4,14 +4,14 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -33.5081,
-        "entry_price": 64907.9,
-        "unrealized_pnl": 2747.188799,
+        "size": -28.88373,
+        "entry_price": 64748.2,
+        "unrealized_pnl": 5264.024517,
         "leverage": 3
       }
     ],
-    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": [],
     "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": [],
+    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": [],
     "0x7839e2f2c375dd2935193f2736167514efff9916": [],
     "0xdf9ea6ec3b7109935ccb4fb267e15ac1fb077ab1": [],
     "0xff4cd3826ecee12acd4329aada4a2d3419fc463c": [],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -115.70492,
-        "entry_price": 65032.3,
-        "unrealized_pnl": 23993.44359,
+        "size": -117.92249,
+        "entry_price": 65026.9,
+        "unrealized_pnl": 54361.119739,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -160.38263,
-        "entry_price": 63680.2,
-        "unrealized_pnl": -183605.426993,
+        "size": -161.71473,
+        "entry_price": 63697.5,
+        "unrealized_pnl": -140446.959595,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 0.31609,
-        "entry_price": 64841.9,
-        "unrealized_pnl": -5.36849,
+        "size": 0.43046,
+        "entry_price": 64570.3,
+        "unrealized_pnl": -1.889104,
         "leverage": 20
       }
     ],
@@ -52,7 +52,7 @@
         "coin": "BTC",
         "size": 209.71183,
         "entry_price": 65370.6,
-        "unrealized_pnl": -114435.20182,
+        "unrealized_pnl": -168750.56579,
         "leverage": 20
       }
     ],
@@ -64,8 +64,8 @@
   "trader_names": {
     "0x85ecf584f25db6f146718b86d493e33c5af72052": "#1位",
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": "#2位",
-    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": "#3位",
-    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": "#4位",
+    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": "#3位",
+    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": "#4位",
     "0x7839e2f2c375dd2935193f2736167514efff9916": "#5位",
     "0xdf9ea6ec3b7109935ccb4fb267e15ac1fb077ab1": "#6位",
     "0xff4cd3826ecee12acd4329aada4a2d3419fc463c": "#7位",
@@ -83,7 +83,7 @@
     "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": "#19位",
     "0xa6ee1ed1ae80b8352603654b39f5e7b9bedd5078": "#20位"
   },
-  "long_ratio": 40.41924426176434,
-  "last_aggregate_bucket": "2026-07-15T20",
-  "last_run": "2026-07-15T23:32:25.425005+00:00"
+  "long_ratio": 40.51613335851602,
+  "last_aggregate_bucket": "2026-07-16T00",
+  "last_run": "2026-07-16T00:59:11.649036+00:00"
 }

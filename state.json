@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -25.76942,
-        "entry_price": 63978.8,
-        "unrealized_pnl": -571.46694,
+        "size": -35.99286,
+        "entry_price": 64024.5,
+        "unrealized_pnl": -5235.22723,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -95.04288,
-        "entry_price": 63431.4,
-        "unrealized_pnl": -54135.856586,
+        "size": -113.76478,
+        "entry_price": 63566.0,
+        "unrealized_pnl": -68710.723142,
         "leverage": 20
       }
     ],
@@ -31,7 +31,7 @@
         "coin": "BTC",
         "size": -198.89177,
         "entry_price": 63669.7,
-        "unrealized_pnl": -65883.969201,
+        "unrealized_pnl": -99496.678331,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 5.81924,
-        "entry_price": 63949.2,
-        "unrealized_pnl": 300.891515,
+        "size": -39.56302,
+        "entry_price": 64115.2,
+        "unrealized_pnl": -2166.830574,
         "leverage": 20
       }
     ],
@@ -50,7 +50,7 @@
         "coin": "BTC",
         "size": 17.07317,
         "entry_price": 63994.1,
-        "unrealized_pnl": 116.55585,
+        "unrealized_pnl": 2950.70207,
         "leverage": 40
       }
     ],
@@ -62,7 +62,7 @@
         "coin": "BTC",
         "size": 209.71183,
         "entry_price": 65370.6,
-        "unrealized_pnl": -287237.74974,
+        "unrealized_pnl": -252425.58596,
         "leverage": 20
       }
     ],
@@ -91,7 +91,7 @@
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": "#19位",
     "0xa6ee1ed1ae80b8352603654b39f5e7b9bedd5078": "#20位"
   },
-  "long_ratio": 42.114926715478894,
-  "last_aggregate_bucket": "2026-07-18T08",
-  "last_run": "2026-07-18T11:17:32.512132+00:00"
+  "long_ratio": 36.87576385481806,
+  "last_aggregate_bucket": "2026-07-18T12",
+  "last_run": "2026-07-18T12:06:51.232324+00:00"
 }

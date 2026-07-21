@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -18.84553,
-        "entry_price": 66625.8,
-        "unrealized_pnl": -311.644713,
+        "size": -16.92868,
+        "entry_price": 66575.8,
+        "unrealized_pnl": 1227.14813,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 238.72469,
-        "entry_price": 66537.8,
-        "unrealized_pnl": 23660.704327,
+        "size": 238.68575,
+        "entry_price": 66536.9,
+        "unrealized_pnl": -8102.306668,
         "leverage": 20
       }
     ],
@@ -29,18 +29,18 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": 11.53111,
+        "size": 8.37076,
         "entry_price": 66725.3,
-        "unrealized_pnl": -1018.475716,
+        "unrealized_pnl": -1861.022233,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 8.8143,
-        "entry_price": 66590.5,
-        "unrealized_pnl": 409.46887,
+        "size": 2.65435,
+        "entry_price": 66494.5,
+        "unrealized_pnl": 22.48319,
         "leverage": 20
       }
     ],
@@ -50,15 +50,7 @@
     "0x10f1d87fbb7617df5641d1c2bcb26f143f43202f": [],
     "0x162cc7c861ebd0c06b3d72319201150482518185": [],
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": [],
-    "0x50b309f78e774a756a2230e1769729094cac9f20": [
-      {
-        "coin": "BTC",
-        "size": -122.63061,
-        "entry_price": 66643.5,
-        "unrealized_pnl": 806.71764,
-        "leverage": 20
-      }
-    ],
+    "0x50b309f78e774a756a2230e1769729094cac9f20": [],
     "0xa6ee1ed1ae80b8352603654b39f5e7b9bedd5078": []
   },
   "trader_names": {
@@ -83,7 +75,7 @@
     "0x50b309f78e774a756a2230e1769729094cac9f20": "#19位",
     "0xa6ee1ed1ae80b8352603654b39f5e7b9bedd5078": "#20位"
   },
-  "long_ratio": 64.67919908572853,
+  "long_ratio": 93.65109915806184,
   "last_aggregate_bucket": "2026-07-21T12",
-  "last_run": "2026-07-21T15:55:58.574991+00:00"
+  "last_run": "2026-07-21T17:06:45.124362+00:00"
 }

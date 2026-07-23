@@ -4,14 +4,14 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 3.68428,
-        "entry_price": 65948.5,
-        "unrealized_pnl": -46.222968,
+        "size": 3.62482,
+        "entry_price": 66063.3,
+        "unrealized_pnl": 238.078072,
         "leverage": 3
       }
     ],
-    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": [],
     "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": [],
+    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": [],
     "0x7839e2f2c375dd2935193f2736167514efff9916": [],
     "0xdf9ea6ec3b7109935ccb4fb267e15ac1fb077ab1": [],
     "0xff4cd3826ecee12acd4329aada4a2d3419fc463c": [],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 183.1446,
-        "entry_price": 66300.1,
-        "unrealized_pnl": -66697.240418,
+        "size": 167.28148,
+        "entry_price": 66283.4,
+        "unrealized_pnl": -25829.735967,
         "leverage": 20
       }
     ],
@@ -29,34 +29,34 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -129.92459,
-        "entry_price": 66014.5,
-        "unrealized_pnl": 10079.44959,
+        "size": -141.71878,
+        "entry_price": 66028.2,
+        "unrealized_pnl": -13303.723965,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 4.6359,
-        "entry_price": 65947.2,
-        "unrealized_pnl": -47.58721,
+        "size": 31.97162,
+        "entry_price": 66045.7,
+        "unrealized_pnl": 2439.507975,
         "leverage": 20
       }
     ],
     "0xe357fa9fecb084f0303ff341b0bc55c89f2bb5ce": [],
-    "0x01d734e9e7847248864c2c7bbab16c4d5e04a990": [],
     "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": [],
+    "0x01d734e9e7847248864c2c7bbab16c4d5e04a990": [],
     "0x10f1d87fbb7617df5641d1c2bcb26f143f43202f": [],
-    "0x162cc7c861ebd0c06b3d72319201150482518185": [],
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": [],
+    "0x162cc7c861ebd0c06b3d72319201150482518185": [],
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": [],
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -87.80887,
-        "entry_price": 65935.1,
-        "unrealized_pnl": -161.994476,
+        "size": -95.09313,
+        "entry_price": 65949.6,
+        "unrealized_pnl": -16678.035163,
         "leverage": 10
       }
     ]
@@ -64,8 +64,8 @@
   "trader_names": {
     "0x85ecf584f25db6f146718b86d493e33c5af72052": "#1位",
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": "#2位",
-    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": "#3位",
-    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": "#4位",
+    "0x399965e15d4e61ec3529cc98b7f7ebb93b733336": "#3位",
+    "0x87f9cd15f5050a9283b8896300f7c8cf69ece2cf": "#4位",
     "0x7839e2f2c375dd2935193f2736167514efff9916": "#5位",
     "0xdf9ea6ec3b7109935ccb4fb267e15ac1fb077ab1": "#6位",
     "0xff4cd3826ecee12acd4329aada4a2d3419fc463c": "#7位",
@@ -75,15 +75,15 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": "#11位",
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": "#12位",
     "0xe357fa9fecb084f0303ff341b0bc55c89f2bb5ce": "#13位",
-    "0x01d734e9e7847248864c2c7bbab16c4d5e04a990": "#14位",
-    "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": "#15位",
+    "0x1c1c270b573d55b68b3d14722b5d5d401511bed0": "#14位",
+    "0x01d734e9e7847248864c2c7bbab16c4d5e04a990": "#15位",
     "0x10f1d87fbb7617df5641d1c2bcb26f143f43202f": "#16位",
-    "0x162cc7c861ebd0c06b3d72319201150482518185": "#17位",
-    "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": "#18位",
+    "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": "#17位",
+    "0x162cc7c861ebd0c06b3d72319201150482518185": "#18位",
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#19位",
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": "#20位"
   },
-  "long_ratio": 46.79022568621019,
+  "long_ratio": 46.14114454273368,
   "last_aggregate_bucket": "2026-07-22T20",
-  "last_run": "2026-07-22T23:39:01.483916+00:00"
+  "last_run": "2026-07-23T01:08:04.493417+00:00"
 }

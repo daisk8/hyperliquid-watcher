@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 5.63819,
-        "entry_price": 64135.8,
-        "unrealized_pnl": -67.773489,
+        "size": 7.33627,
+        "entry_price": 64188.4,
+        "unrealized_pnl": 363.310169,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -94.78912,
-        "entry_price": 64003.1,
-        "unrealized_pnl": -11431.751112,
+        "size": -93.85528,
+        "entry_price": 64023.4,
+        "unrealized_pnl": -20137.750464,
         "leverage": 20
       }
     ],
@@ -29,18 +29,18 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -254.34882,
+        "size": -225.2008,
         "entry_price": 65242.6,
-        "unrealized_pnl": 284566.816568,
+        "unrealized_pnl": 226237.924513,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 0.54062,
-        "entry_price": 64144.4,
-        "unrealized_pnl": -11.052367,
+        "size": 15.8939,
+        "entry_price": 64232.1,
+        "unrealized_pnl": 93.489834,
         "leverage": 20
       }
     ],
@@ -54,9 +54,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -380.63063,
+        "size": -302.86036,
         "entry_price": 64374.6,
-        "unrealized_pnl": 95041.605709,
+        "unrealized_pnl": 39582.366861,
         "leverage": 10
       }
     ]
@@ -83,7 +83,7 @@
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#19位",
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": "#20位"
   },
-  "long_ratio": 0.8395722531140746,
-  "last_aggregate_bucket": "2026-07-24T12",
-  "last_run": "2026-07-24T18:43:22.426569+00:00"
+  "long_ratio": 3.600758283454361,
+  "last_aggregate_bucket": "2026-07-24T20",
+  "last_run": "2026-07-24T20:01:35.558447+00:00"
 }

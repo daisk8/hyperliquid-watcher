@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -11.16739,
-        "entry_price": 65227.6,
-        "unrealized_pnl": -360.888099,
+        "size": -4.52499,
+        "entry_price": 64303.8,
+        "unrealized_pnl": 26.579617,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 206.05706,
-        "entry_price": 64513.2,
-        "unrealized_pnl": 151192.810746,
+        "size": 259.47633,
+        "entry_price": 64487.2,
+        "unrealized_pnl": -49098.205103,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": 16.46382,
-        "entry_price": 65056.9,
-        "unrealized_pnl": 3128.904424,
+        "size": 7.46614,
+        "entry_price": 64638.1,
+        "unrealized_pnl": -2547.186798,
         "leverage": 20
       }
     ],
@@ -40,9 +40,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -10.24625,
-        "entry_price": 65324.3,
-        "unrealized_pnl": 864.294169,
+        "size": 6.63502,
+        "entry_price": 64208.8,
+        "unrealized_pnl": 584.731803,
         "leverage": 20
       }
     ],
@@ -52,9 +52,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": 39.93769,
-        "entry_price": 64777.2,
-        "unrealized_pnl": 18482.262839,
+        "size": 25.25984,
+        "entry_price": 64684.0,
+        "unrealized_pnl": -9776.176693,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x3bcae23e8c380dab4732e9a159c0456f12d866f3": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 92.45659164734724,
-  "last_aggregate_bucket": "2026-07-30T20",
-  "last_run": "2026-07-31T01:09:33.194411+00:00"
+  "long_ratio": 98.50838759408221,
+  "last_aggregate_bucket": "2026-07-31T04",
+  "last_run": "2026-07-31T04:35:24.565396+00:00"
 }

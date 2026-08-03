@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 6.01392,
-        "entry_price": 63298.5,
-        "unrealized_pnl": -292.235363,
+        "size": 7.63161,
+        "entry_price": 62940.3,
+        "unrealized_pnl": 218.637453,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -9.50631,
-        "entry_price": 63522.0,
-        "unrealized_pnl": 2569.123565,
+        "size": -9.59666,
+        "entry_price": 62950.0,
+        "unrealized_pnl": -181.614487,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -165.0684,
-        "entry_price": 63122.4,
-        "unrealized_pnl": -20724.619528,
+        "size": -198.69412,
+        "entry_price": 63102.8,
+        "unrealized_pnl": 26589.577237,
         "leverage": 20
       }
     ],
@@ -40,9 +40,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 3.10305,
-        "entry_price": 63297.2,
-        "unrealized_pnl": -152.72247,
+        "size": -3.71832,
+        "entry_price": 62904.8,
+        "unrealized_pnl": -238.642568,
         "leverage": 20
       }
     ],
@@ -50,9 +50,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -135.5538,
-        "entry_price": 63204.9,
-        "unrealized_pnl": -5835.753288,
+        "size": -138.82869,
+        "entry_price": 63196.6,
+        "unrealized_pnl": 31740.650804,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#19位",
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": "#20位"
   },
-  "long_ratio": 2.8557867130961414,
-  "last_aggregate_bucket": "2026-08-02T20",
-  "last_run": "2026-08-03T01:00:23.658154+00:00"
+  "long_ratio": 2.128943223605697,
+  "last_aggregate_bucket": "2026-08-03T04",
+  "last_run": "2026-08-03T04:32:01.226120+00:00"
 }

@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -0.76711,
-        "entry_price": 63478.9,
-        "unrealized_pnl": 3.00544,
+        "size": 6.01392,
+        "entry_price": 63298.5,
+        "unrealized_pnl": -292.235363,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -7.67481,
-        "entry_price": 63512.8,
-        "unrealized_pnl": 352.054621,
+        "size": -9.50631,
+        "entry_price": 63522.0,
+        "unrealized_pnl": 2569.123565,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -154.77375,
-        "entry_price": 63105.1,
-        "unrealized_pnl": -56005.408248,
+        "size": -165.0684,
+        "entry_price": 63122.4,
+        "unrealized_pnl": -20724.619528,
         "leverage": 20
       }
     ],
@@ -40,9 +40,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -34.20846,
-        "entry_price": 63459.7,
-        "unrealized_pnl": -248.512572,
+        "size": 3.10305,
+        "entry_price": 63297.2,
+        "unrealized_pnl": -152.72247,
         "leverage": 20
       }
     ],
@@ -50,9 +50,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -127.30186,
-        "entry_price": 63185.3,
-        "unrealized_pnl": -35856.401098,
+        "size": -135.5538,
+        "entry_price": 63204.9,
+        "unrealized_pnl": -5835.753288,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#19位",
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": "#20位"
   },
-  "long_ratio": 0.0,
+  "long_ratio": 2.8557867130961414,
   "last_aggregate_bucket": "2026-08-02T20",
-  "last_run": "2026-08-02T23:24:03.601479+00:00"
+  "last_run": "2026-08-03T01:00:23.658154+00:00"
 }

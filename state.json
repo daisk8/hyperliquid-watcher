@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 3.12726,
-        "entry_price": 64447.3,
-        "unrealized_pnl": 242.956255,
+        "size": -3.19865,
+        "entry_price": 64676.5,
+        "unrealized_pnl": 139.250788,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 182.68066,
-        "entry_price": 64231.4,
-        "unrealized_pnl": 53630.148,
+        "size": 182.34966,
+        "entry_price": 64257.3,
+        "unrealized_pnl": 67771.272726,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": 54.74726,
-        "entry_price": 64476.5,
-        "unrealized_pnl": 2650.095445,
+        "size": 15.37279,
+        "entry_price": 64510.2,
+        "unrealized_pnl": 1825.143191,
         "leverage": 20
       }
     ],
@@ -41,9 +41,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -8.69753,
-        "entry_price": 64490.6,
-        "unrealized_pnl": -298.520511,
+        "size": 2.89125,
+        "entry_price": 64608.4,
+        "unrealized_pnl": 59.377963,
         "leverage": 20
       }
     ],
@@ -51,9 +51,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": 162.37728,
-        "entry_price": 64344.2,
-        "unrealized_pnl": 29354.51244,
+        "size": 177.61247,
+        "entry_price": 64381.5,
+        "unrealized_pnl": 43945.735282,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#19位",
     "0x04dbde5c9d1e6a3239c8ff8ee3fca386a4a3c605": "#20位"
   },
-  "long_ratio": 97.88705142693806,
-  "last_aggregate_bucket": "2026-08-05T04",
-  "last_run": "2026-08-05T15:27:39.222365+00:00"
+  "long_ratio": 99.16139437386377,
+  "last_aggregate_bucket": "2026-08-05T16",
+  "last_run": "2026-08-05T16:59:19.917536+00:00"
 }

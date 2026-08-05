@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 1.75504,
-        "entry_price": 64035.2,
-        "unrealized_pnl": 131.276377,
+        "size": 3.29088,
+        "entry_price": 64174.8,
+        "unrealized_pnl": -269.500541,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 152.47236,
-        "entry_price": 64151.0,
-        "unrealized_pnl": -7018.788822,
+        "size": 191.21963,
+        "entry_price": 64200.4,
+        "unrealized_pnl": -21505.358435,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -27.35841,
-        "entry_price": 64087.6,
-        "unrealized_pnl": -474.111267,
+        "size": 22.42443,
+        "entry_price": 64455.9,
+        "unrealized_pnl": -8251.010876,
         "leverage": 20
       }
     ],
@@ -40,9 +40,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -9.31817,
-        "entry_price": 64086.6,
-        "unrealized_pnl": -171.00605,
+        "size": 0.3099,
+        "entry_price": 64102.5,
+        "unrealized_pnl": -4.806369,
         "leverage": 20
       }
     ],
@@ -51,9 +51,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": 96.57152,
-        "entry_price": 64057.0,
-        "unrealized_pnl": 4529.264417,
+        "size": 118.464,
+        "entry_price": 64178.7,
+        "unrealized_pnl": -10873.525547,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#19位",
     "0x04dbde5c9d1e6a3239c8ff8ee3fca386a4a3c605": "#20位"
   },
-  "long_ratio": 87.24184147866514,
+  "long_ratio": 100.0,
   "last_aggregate_bucket": "2026-08-05T04",
-  "last_run": "2026-08-05T11:33:33.086888+00:00"
+  "last_run": "2026-08-05T13:14:22.058156+00:00"
 }

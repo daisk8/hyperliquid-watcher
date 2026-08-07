@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 2.68702,
-        "entry_price": 64284.0,
-        "unrealized_pnl": 249.754916,
+        "size": -3.65923,
+        "entry_price": 64357.0,
+        "unrealized_pnl": 14.647828,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 104.68084,
-        "entry_price": 64392.8,
-        "unrealized_pnl": -825.671815,
+        "size": 115.63146,
+        "entry_price": 64381.5,
+        "unrealized_pnl": -3305.471305,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -40.76276,
-        "entry_price": 64332.0,
-        "unrealized_pnl": -2159.456053,
+        "size": -36.55111,
+        "entry_price": 64331.9,
+        "unrealized_pnl": -768.688119,
         "leverage": 20
       }
     ],
@@ -41,9 +41,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 4.62484,
-        "entry_price": 64309.2,
-        "unrealized_pnl": 350.147742,
+        "size": 12.14773,
+        "entry_price": 64263.4,
+        "unrealized_pnl": 1076.249928,
         "leverage": 20
       }
     ],
@@ -51,9 +51,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": 52.5227,
+        "size": 52.52111,
         "entry_price": 64518.2,
-        "unrealized_pnl": -7000.330593,
+        "unrealized_pnl": -8733.315304,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x04dbde5c9d1e6a3239c8ff8ee3fca386a4a3c605": "#19位",
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#20位"
   },
-  "long_ratio": 80.14267080336262,
+  "long_ratio": 81.76489805661986,
   "last_aggregate_bucket": "2026-08-07T00",
-  "last_run": "2026-08-07T06:15:56.237452+00:00"
+  "last_run": "2026-08-07T07:42:27.195418+00:00"
 }

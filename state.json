@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 2.56915,
-        "entry_price": 64324.5,
-        "unrealized_pnl": 42.14434,
+        "size": 5.11736,
+        "entry_price": 64326.9,
+        "unrealized_pnl": -132.077602,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 65.24977,
-        "entry_price": 64245.0,
-        "unrealized_pnl": 6329.063511,
+        "size": 108.13151,
+        "entry_price": 64302.4,
+        "unrealized_pnl": 59.489146,
         "leverage": 20
       }
     ],
@@ -30,9 +30,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -135.47685,
-        "entry_price": 64349.0,
-        "unrealized_pnl": 955.408024,
+        "size": -126.13346,
+        "entry_price": 64349.1,
+        "unrealized_pnl": 5815.190689,
         "leverage": 20
       }
     ],
@@ -40,9 +40,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 5.93973,
-        "entry_price": 64243.6,
-        "unrealized_pnl": 584.415614,
+        "size": 13.21228,
+        "entry_price": 64399.9,
+        "unrealized_pnl": -1281.36676,
         "leverage": 20
       }
     ],
@@ -51,9 +51,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -349.97914,
+        "size": -321.00564,
         "entry_price": 64438.0,
-        "unrealized_pnl": 33612.034939,
+        "unrealized_pnl": 43348.636748,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#19位",
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#20位"
   },
-  "long_ratio": 13.18968509122007,
-  "last_aggregate_bucket": "2026-08-11T08",
-  "last_run": "2026-08-11T11:53:55.783336+00:00"
+  "long_ratio": 22.04691333380695,
+  "last_aggregate_bucket": "2026-08-11T12",
+  "last_run": "2026-08-11T12:32:49.466144+00:00"
 }

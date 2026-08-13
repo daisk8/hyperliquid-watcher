@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 8.38086,
-        "entry_price": 63394.5,
-        "unrealized_pnl": 104.380512,
+        "size": -7.53575,
+        "entry_price": 63558.9,
+        "unrealized_pnl": 403.635825,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -58.22873,
-        "entry_price": 63458.8,
-        "unrealized_pnl": 3020.483052,
+        "size": -21.11931,
+        "entry_price": 63495.9,
+        "unrealized_pnl": -318.606581,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -108.07591,
+        "size": -105.32591,
         "entry_price": 63859.9,
-        "unrealized_pnl": 48953.679577,
+        "unrealized_pnl": 36754.154722,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -2.989,
-        "entry_price": 63426.8,
-        "unrealized_pnl": 59.307026,
+        "size": -42.2606,
+        "entry_price": 63545.2,
+        "unrealized_pnl": 1447.857179,
         "leverage": 20
       }
     ],
@@ -51,9 +51,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -128.01251,
-        "entry_price": 63628.7,
-        "unrealized_pnl": 28390.00364,
+        "size": -123.61251,
+        "entry_price": 63628.5,
+        "unrealized_pnl": 13915.496355,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 2.7416474124955457,
-  "last_aggregate_bucket": "2026-08-12T20",
-  "last_run": "2026-08-12T23:54:11.500251+00:00"
+  "long_ratio": 0.0,
+  "last_aggregate_bucket": "2026-08-13T00",
+  "last_run": "2026-08-13T00:46:51.535717+00:00"
 }

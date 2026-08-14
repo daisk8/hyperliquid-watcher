@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 4.24572,
-        "entry_price": 62603.4,
-        "unrealized_pnl": 316.660584,
+        "size": 1.86699,
+        "entry_price": 62667.1,
+        "unrealized_pnl": 85.509182,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -85.03008,
-        "entry_price": 62910.1,
-        "unrealized_pnl": 20336.310711,
+        "size": -69.63538,
+        "entry_price": 62898.0,
+        "unrealized_pnl": 12328.962364,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -183.20755,
-        "entry_price": 63404.4,
-        "unrealized_pnl": 134378.920336,
+        "size": -185.20755,
+        "entry_price": 63395.2,
+        "unrealized_pnl": 124868.043546,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 1.73951,
-        "entry_price": 62612.0,
-        "unrealized_pnl": 102.521098,
+        "size": -1.68791,
+        "entry_price": 62623.8,
+        "unrealized_pnl": -163.998324,
         "leverage": 20
       }
     ],
@@ -50,9 +50,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -298.72465,
+        "size": -297.66921,
         "entry_price": 63335.1,
-        "unrealized_pnl": 201251.615033,
+        "unrealized_pnl": 182799.477287,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x04dbde5c9d1e6a3239c8ff8ee3fca386a4a3c605": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 1.0446384521332506,
+  "long_ratio": 0.33574908521821395,
   "last_aggregate_bucket": "2026-08-14T12",
-  "last_run": "2026-08-14T14:28:29.863067+00:00"
+  "last_run": "2026-08-14T15:21:27.976327+00:00"
 }

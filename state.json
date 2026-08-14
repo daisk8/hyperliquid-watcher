@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -3.26622,
-        "entry_price": 63103.3,
-        "unrealized_pnl": 378.53149,
+        "size": -0.6996,
+        "entry_price": 62970.8,
+        "unrealized_pnl": 52.396774,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -40.36739,
-        "entry_price": 62993.6,
-        "unrealized_pnl": 229.772392,
+        "size": -33.41285,
+        "entry_price": 62997.4,
+        "unrealized_pnl": 3390.692108,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -180.26443,
-        "entry_price": 63394.3,
-        "unrealized_pnl": 73250.156479,
+        "size": -181.26443,
+        "entry_price": 63391.7,
+        "unrealized_pnl": 89858.484039,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 1.17505,
-        "entry_price": 62986.2,
-        "unrealized_pnl": -2.70204,
+        "size": 3.42508,
+        "entry_price": 62909.3,
+        "unrealized_pnl": -49.295381,
         "leverage": 20
       }
     ],
@@ -50,9 +50,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -228.94373,
+        "size": -225.54373,
         "entry_price": 63322.4,
-        "unrealized_pnl": 77489.208335,
+        "unrealized_pnl": 96411.822739,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x04dbde5c9d1e6a3239c8ff8ee3fca386a4a3c605": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 0.2588119973176324,
+  "long_ratio": 0.7708142730044258,
   "last_aggregate_bucket": "2026-08-14T16",
-  "last_run": "2026-08-14T18:00:26.688423+00:00"
+  "last_run": "2026-08-14T18:57:47.558655+00:00"
 }

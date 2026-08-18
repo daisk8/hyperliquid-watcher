@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -4.45608,
-        "entry_price": 64503.7,
-        "unrealized_pnl": 177.107413,
+        "size": 2.77921,
+        "entry_price": 64287.8,
+        "unrealized_pnl": -230.191051,
         "leverage": 3
       }
     ],
@@ -19,9 +19,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 405.5272,
-        "entry_price": 64139.7,
-        "unrealized_pnl": 131093.553358,
+        "size": 434.45105,
+        "entry_price": 64173.8,
+        "unrealized_pnl": 13517.317751,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": 78.12075,
-        "entry_price": 64238.5,
-        "unrealized_pnl": 17531.293457,
+        "size": 87.20878,
+        "entry_price": 64254.0,
+        "unrealized_pnl": -4275.638613,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": 10.91284,
-        "entry_price": 64448.9,
-        "unrealized_pnl": 153.226136,
+        "size": 11.62473,
+        "entry_price": 64213.3,
+        "unrealized_pnl": -97.494498,
         "leverage": 20
       }
     ],
@@ -49,9 +49,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": 224.65488,
-        "entry_price": 64201.7,
-        "unrealized_pnl": 58695.703732,
+        "size": 230.14796,
+        "entry_price": 64210.7,
+        "unrealized_pnl": -1326.778683,
         "leverage": 10
       }
     ],
@@ -83,7 +83,7 @@
     "0x01d734e9e7847248864c2c7bbab16c4d5e04a990": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 99.3842401613715,
+  "long_ratio": 100.0,
   "last_aggregate_bucket": "2026-08-18T00",
-  "last_run": "2026-08-18T00:02:37.213233+00:00"
+  "last_run": "2026-08-18T01:43:14.364206+00:00"
 }

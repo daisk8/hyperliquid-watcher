@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -6.85916,
-        "entry_price": 77958.1,
-        "unrealized_pnl": 179.311763,
+        "size": -8.66646,
+        "entry_price": 78429.9,
+        "unrealized_pnl": -797.795112,
         "leverage": 3
       }
     ],
@@ -18,9 +18,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 55.62139,
-        "entry_price": 77860.1,
-        "unrealized_pnl": 3662.675347,
+        "size": -23.2826,
+        "entry_price": 78447.4,
+        "unrealized_pnl": -1758.414018,
         "leverage": 20
       }
     ],
@@ -32,16 +32,16 @@
         "coin": "BTC",
         "size": -55.105,
         "entry_price": 77593.8,
-        "unrealized_pnl": -18222.266161,
+        "unrealized_pnl": -51202.608661,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -0.39545,
-        "entry_price": 77915.0,
-        "unrealized_pnl": -3.756775,
+        "size": 0.87311,
+        "entry_price": 78474.0,
+        "unrealized_pnl": 42.78239,
         "leverage": 20
       }
     ],
@@ -49,9 +49,9 @@
     "0xfc27136e42af1732ddc9ce2605ea9bff1b959d9d": [
       {
         "coin": "BTC",
-        "size": -462.99079,
-        "entry_price": 77071.5,
-        "unrealized_pnl": -394913.913111,
+        "size": -469.49133,
+        "entry_price": 77091.5,
+        "unrealized_pnl": -672043.638975,
         "leverage": 10
       }
     ],
@@ -61,9 +61,9 @@
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": [
       {
         "coin": "BTC",
-        "size": -77.64607,
-        "entry_price": 77720.3,
-        "unrealized_pnl": -15854.323072,
+        "size": -79.04426,
+        "entry_price": 77745.2,
+        "unrealized_pnl": -61394.490757,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": "#19位",
     "0x3bcae23e8c380dab4732e9a159c0456f12d866f3": "#20位"
   },
-  "long_ratio": 8.445168796363948,
+  "long_ratio": 0.137181631805135,
   "last_aggregate_bucket": "2026-08-22T00",
-  "last_run": "2026-08-22T02:02:35.708824+00:00"
+  "last_run": "2026-08-22T03:01:45.753968+00:00"
 }

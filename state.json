@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -18.09193,
-        "entry_price": 85344.4,
-        "unrealized_pnl": 25.701722,
+        "size": -10.64447,
+        "entry_price": 85354.0,
+        "unrealized_pnl": 266.136434,
         "leverage": 3
       }
     ],
@@ -17,9 +17,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": -184.17611,
-        "entry_price": 85055.0,
-        "unrealized_pnl": -52848.849739,
+        "size": -197.3364,
+        "entry_price": 85123.5,
+        "unrealized_pnl": -40546.605204,
         "leverage": 20
       }
     ],
@@ -28,9 +28,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -19.80608,
-        "entry_price": 85386.4,
-        "unrealized_pnl": 880.036,
+        "size": -8.90174,
+        "entry_price": 85279.5,
+        "unrealized_pnl": -435.472907,
         "leverage": 20
       }
     ],
@@ -39,9 +39,9 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -44.98583,
-        "entry_price": 84938.2,
-        "unrealized_pnl": -18162.493497,
+        "size": -66.49159,
+        "entry_price": 85032.5,
+        "unrealized_pnl": -19678.274932,
         "leverage": 20
       }
     ],
@@ -50,9 +50,9 @@
     "0xccf3fff396a14d55d93366f870c007425e9f2a75": [
       {
         "coin": "BTC",
-        "size": 29.09676,
-        "entry_price": 85135.0,
-        "unrealized_pnl": 6020.606233,
+        "size": -41.89972,
+        "entry_price": 85272.9,
+        "unrealized_pnl": -1720.59315,
         "leverage": 40
       }
     ],
@@ -61,9 +61,9 @@
     "0x020ca66c30bec2c4fe3861a94e4db4a498a35872": [
       {
         "coin": "BTC",
-        "size": 424.0,
-        "entry_price": 84790.2,
-        "unrealized_pnl": 233943.975476,
+        "size": 490.0,
+        "entry_price": 84858.1,
+        "unrealized_pnl": 223344.12209,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0x020ca66c30bec2c4fe3861a94e4db4a498a35872": "#19位",
     "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": "#20位"
   },
-  "long_ratio": 62.91641162379783,
+  "long_ratio": 60.1024990471914,
   "last_aggregate_bucket": "2026-10-04T04",
-  "last_run": "2026-10-04T10:33:09.477446+00:00"
+  "last_run": "2026-10-04T15:28:35.381704+00:00"
 }

@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -36.87075,
-        "entry_price": 79880.5,
-        "unrealized_pnl": 8096.298638,
+        "size": -9.43788,
+        "entry_price": 80306.0,
+        "unrealized_pnl": -178.514831,
         "leverage": 3
       }
     ],
@@ -17,9 +17,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 122.36842,
-        "entry_price": 80055.5,
-        "unrealized_pnl": -48275.352529,
+        "size": 103.90856,
+        "entry_price": 80094.2,
+        "unrealized_pnl": 23981.141234,
         "leverage": 20
       }
     ],
@@ -29,9 +29,9 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -14.28967,
-        "entry_price": 79804.9,
-        "unrealized_pnl": 2056.962914,
+        "size": 13.88016,
+        "entry_price": 80257.9,
+        "unrealized_pnl": 930.249334,
         "leverage": 20
       }
     ],
@@ -40,7 +40,7 @@
         "coin": "BTC",
         "size": -76.99767,
         "entry_price": 80628.9,
-        "unrealized_pnl": 74528.032606,
+        "unrealized_pnl": 23401.579726,
         "leverage": 20
       }
     ],
@@ -49,14 +49,22 @@
     "0x57dd78cd36e76e2011e8f6dc25cabbaba994494b": [],
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": [],
     "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": [],
-    "0xec4a6f59960fb55a7fa49262e2628687b322cf62": [],
+    "0xec4a6f59960fb55a7fa49262e2628687b322cf62": [
+      {
+        "coin": "BTC",
+        "size": 250.0,
+        "entry_price": 79816.1,
+        "unrealized_pnl": 127210.30591,
+        "leverage": 40
+      }
+    ],
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": [],
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": [
       {
         "coin": "BTC",
-        "size": 154.03406,
-        "entry_price": 80141.3,
-        "unrealized_pnl": -73906.896284,
+        "size": 130.0885,
+        "entry_price": 80135.2,
+        "unrealized_pnl": 24949.457552,
         "leverage": 40
       }
     ]
@@ -83,7 +91,7 @@
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#19位",
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": "#20位"
   },
-  "long_ratio": 68.32165576590917,
-  "last_aggregate_bucket": "2026-10-26T12",
-  "last_run": "2026-10-27T06:47:47.205506+00:00"
+  "long_ratio": 85.2073145688738,
+  "last_aggregate_bucket": "2026-10-27T12",
+  "last_run": "2026-10-27T12:42:51.432687+00:00"
 }

@@ -4,9 +4,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": -16.90765,
-        "entry_price": 80152.8,
-        "unrealized_pnl": -543.867593,
+        "size": -36.87075,
+        "entry_price": 79880.5,
+        "unrealized_pnl": 8096.298638,
         "leverage": 3
       }
     ],
@@ -17,9 +17,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 247.18379,
-        "entry_price": 80092.3,
-        "unrealized_pnl": 22910.745217,
+        "size": 122.36842,
+        "entry_price": 80055.5,
+        "unrealized_pnl": -48275.352529,
         "leverage": 20
       }
     ],
@@ -29,18 +29,18 @@
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -20.0952,
-        "entry_price": 80142.6,
-        "unrealized_pnl": -851.376599,
+        "size": -14.28967,
+        "entry_price": 79804.9,
+        "unrealized_pnl": 2056.962914,
         "leverage": 20
       }
     ],
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -70.36426,
-        "entry_price": 80673.6,
-        "unrealized_pnl": 34384.162606,
+        "size": -76.99767,
+        "entry_price": 80628.9,
+        "unrealized_pnl": 74528.032606,
         "leverage": 20
       }
     ],
@@ -54,9 +54,9 @@
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": [
       {
         "coin": "BTC",
-        "size": 160.96697,
-        "entry_price": 80161.6,
-        "unrealized_pnl": 3922.067706,
+        "size": 154.03406,
+        "entry_price": 80141.3,
+        "unrealized_pnl": -73906.896284,
         "leverage": 40
       }
     ]
@@ -83,7 +83,7 @@
     "0xe4c6ae25959d7fc66cf2dd5965fb78c5e09c4048": "#19位",
     "0x023a3d058020fb76cca98f01b3c48c8938a22355": "#20位"
   },
-  "long_ratio": 79.17296058039656,
+  "long_ratio": 68.32165576590917,
   "last_aggregate_bucket": "2026-10-26T12",
-  "last_run": "2026-10-27T01:38:33.584266+00:00"
+  "last_run": "2026-10-27T06:47:47.205506+00:00"
 }

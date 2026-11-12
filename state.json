@@ -3,9 +3,9 @@
     "0xf5d81a135f756ca16544e53c20fc20643ec3ad53": [
       {
         "coin": "BTC",
-        "size": 3.48336,
-        "entry_price": 73738.1,
-        "unrealized_pnl": 16.629709,
+        "size": 5.13574,
+        "entry_price": 72833.6,
+        "unrealized_pnl": -29.102385,
         "leverage": 3
       }
     ],
@@ -18,9 +18,9 @@
     "0xecb63caa47c7c4e77f60f1ce858cf28dc2b82b00": [
       {
         "coin": "BTC",
-        "size": 169.00668,
-        "entry_price": 73895.9,
-        "unrealized_pnl": -25595.791707,
+        "size": 121.29095,
+        "entry_price": 73166.9,
+        "unrealized_pnl": -42445.376143,
         "leverage": 20
       }
     ],
@@ -29,41 +29,41 @@
     "0xfc667adba8d4837586078f4fdcdc29804337ca06": [
       {
         "coin": "BTC",
-        "size": -135.79972,
+        "size": -121.60995,
         "entry_price": 74838.0,
-        "unrealized_pnl": 148433.051214,
+        "unrealized_pnl": 245777.252676,
         "leverage": 20
       }
     ],
     "0x7b7f72a28fe109fa703eeed7984f2a8a68fedee2": [
       {
         "coin": "BTC",
-        "size": -1.27384,
-        "entry_price": 73764.0,
-        "unrealized_pnl": 24.20422,
+        "size": -4.54412,
+        "entry_price": 73229.4,
+        "unrealized_pnl": 1851.670023,
         "leverage": 20
       }
     ],
     "0xe357fa9fecb084f0303ff341b0bc55c89f2bb5ce": [],
-    "0xbf732ea04197942783e34730ed6e0f6099575d58": [],
-    "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": [],
-    "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": [],
-    "0x5c9b84105d63f0c8ed35fd62f66d9b8c6800ce01": [],
-    "0x4b62652d2f176bf5422c8157c5b37984837d57ca": [
+    "0xbf732ea04197942783e34730ed6e0f6099575d58": [
       {
         "coin": "BTC",
-        "size": -160.1103,
-        "entry_price": 73634.5,
-        "unrealized_pnl": -17677.72323,
+        "size": -150.0,
+        "entry_price": 73415.1,
+        "unrealized_pnl": 88978.70309,
         "leverage": 40
       }
     ],
+    "0x4e23288cee4960f9f962195c22948e4bc7ae20c3": [],
+    "0xeeb56331b6a250fe2dbc123f08bdb87aa9840464": [],
+    "0x5c9b84105d63f0c8ed35fd62f66d9b8c6800ce01": [],
+    "0x4b62652d2f176bf5422c8157c5b37984837d57ca": [],
     "0xec4a6f59960fb55a7fa49262e2628687b322cf62": [
       {
         "coin": "BTC",
-        "size": 0.90872,
-        "entry_price": 73778.4,
-        "unrealized_pnl": -30.432601,
+        "size": 319.3742,
+        "entry_price": 73445.5,
+        "unrealized_pnl": -197224.180081,
         "leverage": 40
       }
     ],
@@ -91,7 +91,7 @@
     "0xec4a6f59960fb55a7fa49262e2628687b322cf62": "#19位",
     "0xf84d8d3863043d578b17c1f76dded6655d1f05fc": "#20位"
   },
-  "long_ratio": 36.84767618489608,
-  "last_aggregate_bucket": "2026-11-02T20",
-  "last_run": "2026-11-12T03:58:06.104017+00:00"
+  "long_ratio": 61.74912767411418,
+  "last_aggregate_bucket": "2026-11-12T12",
+  "last_run": "2026-11-12T12:08:23.341511+00:00"
 }
